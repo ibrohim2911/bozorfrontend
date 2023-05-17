@@ -102,32 +102,28 @@
     
 })(jQuery);
 
-const searchBtn = document.getElementById("search-btn");
-const searchText = document.getElementById("search-text");
+// const searchBtn = document.getElementById("search-btn");
+// const searchText = document.getElementById("search-text");
 
-searchBtn.addEventListener("click", function() {
-  searchText.textContent = "Qidirilgan mahsulotlar";
-});
-
-
+// searchBtn.addEventListener("click", function() {
+//   searchText.textContent = "Qidirilgan mahsulotlar";
+// });
 
 
 
 
 
 
-
-
-const toggleButton = document.getElementsByClassName('navbar-toggler');
+// const toggleButton = document.getElementsByClassName('navbar-toggler');
 
 
 
-const collapseContent = document.getElementsByClassName('navbar-collapse');
+// const collapseContent = document.getElementsByClassName('navbar-collapse');
 
-toggleButton.addEventListener('click', function () {
-        collapseContent.classList.add('show')
+// toggleButton.addEventListener('click', function () {
+//         collapseContent.classList.add('show')
     
-    });
+//     });
     
 
 
