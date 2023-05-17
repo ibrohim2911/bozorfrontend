@@ -1,7 +1,7 @@
 import React, {useState,useEffect} from 'react'
 import {useParams, Link} from 'react-router-dom'
 import Navbar from './navbar'
-export default function detail() {
+export default function Detail() {
   const [product, setProduct] = useState(null);
   const { productId } = useParams();
   
