@@ -1,38 +1,79 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
+import Navbar from './navbar'
+export default function Register() {
+  const [product, setProduct] = useState({ name: '' });
+  const [customernum, setCustomernum] = useState('');
+  const { productId } = useParams();
+  const navigate = useNavigate();
+  useEffect(() => {
+    fetch(`https://kok-bozor.uz/bruh4api/product/${productId}`)
+      .then((response) => response.json())
+      .then((data) => {
+        setProduct(data);
+      })
+      .catch((error) => console.log(error));
 
-export default function register() {
+  }, [productId]);
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    // send data to backend here
+    fetch('https://kok-bozor.uz/bruh4api/orders/send/', {
+      method: 'POST',
+      body: JSON.stringify({ product: productId, customernum: customernum }),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+      .then((response) => response.json())
+      .then((data) => console.log(data))
+      .catch((error) => console.log(error));
+    navigate('/')  
+    
+  };
+
   return (
-      <div>
-        <nav>
-          <div className="logo"><i className="fa-solid fa-cart-shopping" /></div>
-          <div className="main"><ul><a href="index.html"><li>asosiy</li></a>
-              <a href="#"><li>haqida</li></a> 
-              <a href="./products.html"><li>mahsulotlar</li></a></ul></div>
-          <div className="left"><a href="#"><i><i className="fa-brands fa-telegram" /></i></a><a href="#"><i><i className="fa-brands fa-instagram" /></i></a><a href="#"><i><i className="fa-solid fa-phone" /></i></a></div>
-        </nav>
-        <div className="form">
-          <div className="form-toggle" />
-          <div className="form-panel one">
-            <div className="form-header">
-              <h1>Kassa</h1>
-            </div>
-            <div className="form-content">
-              <form>
-                <div className="form-group">
-                  <label htmlFor="username">mahsulot</label>
-                  <input type="text" disabled id="username" defaultValue="sada" name="username" required="required" />
-                </div>
-                <div className="form-group">
-                  <label htmlFor="password">telefon raqamingiz:</label>
-                  <input type="password" id="password" name="password" required="required" />
-                </div>
-                <div className="form-group">
-                  <button type="submit">buyurtna berish</button>
-                </div>
-              </form>
-            </div>
+    <div>
+      <Navbar/>
+      <div className="form">
+        <div className="form-toggle" />
+        <div className="form-panel one">
+          <div className="form-header">
+            <h1>Kassa</h1>
           </div>
-        </div>
-      </div>
+          <div className="form-content">
+            <form onSubmit={handleSubmit}>
+              <div className="form-group">
+                <label htmlFor="username">mahsulot</label>
 
-)};
+                <input
+                  type="text"
+                  disabled
+                  id="username"
+                  value={product.name}
+                />
+                <input
+                  type="hidden"
+                  id="username"
+                  name="product"
+                  required="required"
+                  value={productId}
+                  onChange={(event) => setProduct({ ...product, id: event.target.value })}
+                />
+              </div>
+              <div className="form-group">
+                <label htmlFor="password">telefon raqamingiz:</label>
+                <input
+                  type="number"
+                  id="password"
+                  name="customernum"
+                  required="required"
+                  value={customernum}
+                  onChange={(event) =>
+                    setCustomernum(event.target.value)}/>
+                    
+                    </div><div className="form-group">
+                <button type="submit" >buyurtma berish</button>
+              </div></form></div></div></div></div>
+                  )}
