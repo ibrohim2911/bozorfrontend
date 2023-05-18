@@ -77,7 +77,14 @@ function ProductList() {
   const location = useLocation();
 
   useEffect(() => {
-    fetch('https://bruh4python.pythonanywhere.com/product')
+    fetch("https://bruh4python.pythonanywhere.com/product/", {
+      method: 'GET',
+      mode: 'cors',
+      dataType: 'json',
+      headers: {
+        'Accept': 'application/json'
+      }
+    })
       .then(response => response.json())
       .then(data => {
         const sortedProducts = data.sort((a, b) => a.producttype.localeCompare(b.producttype));
