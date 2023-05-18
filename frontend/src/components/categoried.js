@@ -77,7 +77,7 @@ function ProductList() {
   const location = useLocation();
 
   useEffect(() => {
-    fetch('https://kok-bozor.uz/bruh4api/product')
+    fetch('https://bruh4python.pythonanywhere.com/product')
       .then(response => response.json())
       .then(data => {
         const sortedProducts = data.sort((a, b) => a.producttype.localeCompare(b.producttype));

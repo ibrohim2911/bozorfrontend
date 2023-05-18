@@ -6,7 +6,7 @@ export default function Products() {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch("https://kok-bozor.uz/bruh4api/product/", {
+    fetch("https://bruh4python.pythonanywhere.com/product/", {
       method: 'GET',
       mode: 'cors',
       dataType: 'json',

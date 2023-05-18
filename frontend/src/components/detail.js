@@ -6,7 +6,7 @@ export default function Detail() {
   const { productId } = useParams();
   
   useEffect(() => {
-    fetch(`https://kok-bozor.uz/bruh4api/product/${productId}/`, {
+    fetch(`https://bruh4python.pythonanywhere.com/product/${productId}/`, {
       method: 'GET',
       mode: 'cors',
       headers: {
