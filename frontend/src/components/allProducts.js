@@ -19,7 +19,7 @@ function Search() {
   };
 
   useEffect(() => {
-    fetch('http://bruh4python.pythonanywhere.com/product')
+    fetch('https://bruh4python.pythonanywhere.com/product')
       .then((response) => response.json())
       .then((data) => {
         setAllProducts(data);
