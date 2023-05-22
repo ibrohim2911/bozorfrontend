@@ -3970,7 +3970,7 @@ input[type="button"].btn-block {
 
 .nav {
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
@@ -9957,6 +9957,12 @@ body {
     width: 400px;
   }nav i{
     margin: 4px;
+    height: 10px;
+  }nav ul{
+    width: 130px!important;
+  }
+  .logo{
+    width: 130px;
   }
 }
 .col-lg-3 .col-md-4 .col-sm-6 .pb-1{
