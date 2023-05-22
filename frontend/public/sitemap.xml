@@ -6,16 +6,13 @@
     <loc>https://kok-bozor.uz/products/</loc>
   </url>
   <url>
-    <loc>https://kok-bozor.uz/products/all</loc>
-  </url>
-  <url>
     <loc>https://kok-bozor.uz/products/{productId}</loc>
   </url>
   <url>
     <loc>https://kok-bozor.uz/buying/{productId}</loc>
   </url>
   <url>
-    <loc>https://kok-bozor.uz/categories/</loc>
+    <loc>https://www.kok-bozor.uz/categoried</loc>
   </url>
   <url>
     <loc>https://kok-bozor.uz/404</loc>
