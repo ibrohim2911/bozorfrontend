@@ -92,7 +92,7 @@ function ProductList() {
         setFilteredProducts(sortedProducts);
       })
       .catch(error => console.log(error));
-  }, []);
+  }, []);  
 
   useEffect(() => {
     const hash = location.hash.slice(1);
