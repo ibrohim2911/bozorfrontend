@@ -40,7 +40,6 @@
 }
 .nav{
   height: 40px;
-  position: fixed;
   display: flex!important;
   justify-content: space-around;
   align-items: center;
