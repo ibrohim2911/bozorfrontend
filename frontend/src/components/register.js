@@ -7,7 +7,7 @@ export default function Register() {
   const { productId } = useParams();
   const navigate = useNavigate();
   useEffect(() => {
-    fetch(`https://bruh4python.pythonanywhere.com/product/${productId}`)
+    fetch(`https://55ff-213-230-92-18.ngrok-free.app/product/${productId}`)
       .then((response) => response.json())
       .then((data) => {
         setProduct(data);
@@ -19,7 +19,7 @@ export default function Register() {
   const handleSubmit = (event) => {
     event.preventDefault();
     // send data to backend here
-    fetch('https://bruh4python.pythonanywhere.com/orders/send/', {
+    fetch('https://55ff-213-230-92-18.ngrok-free.app/orders/send/', {
       method: 'POST',
       body: JSON.stringify({ product: productId, customernum: customernum }),
       headers: {

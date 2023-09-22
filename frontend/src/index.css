@@ -9999,7 +9999,7 @@ margin-bottom: 25px;
 }
 .btn-outline-success{
   margin-left: 15px;
-}
+}*
 .page_404{ padding:40px 0; background:#fff; font-family: 'Arvo', serif;
 }
 
@@ -10021,7 +10021,7 @@ margin-bottom: 25px;
 			 font-size:80px;
 			 }
 			 
-			 .link_404{			 
+			.link_404{			 
 	color: #fff!important;
     padding: 10px 20px;
     background: #39ac31;
@@ -10037,4 +10037,21 @@ margin-bottom: 25px;
   display: flex;
   justify-content: space-around;
   width: 150px;
+}
+@media (max-width:400px) {
+  .logo{
+    width: 80px;
+    }
+    .logoname{
+      font-size: 13px;
+      }
+  nav svg{
+    height: 15px !important;
+    width: 15px !important;
+    
+  }
+  .logo svg{
+    padding-bottom: 2px;
+  }
+
 }

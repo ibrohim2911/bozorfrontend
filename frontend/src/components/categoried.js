@@ -77,7 +77,7 @@ function ProductList() {
   const location = useLocation();
 
   useEffect(() => {
-    fetch("https://bruh4python.pythonanywhere.com/product/", {
+    fetch("https://55ff-213-230-92-18.ngrok-free.app/product/", {
       method: 'GET',
       mode: 'cors',
       dataType: 'json',

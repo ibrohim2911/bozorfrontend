@@ -6,7 +6,7 @@ export default function Detail() {
   const { productId } = useParams();
   
   useEffect(() => {
-    fetch(`https://bruh4python.pythonanywhere.com/product/${productId}/`, {
+    fetch(`https://55ff-213-230-92-18.ngrok-free.app/product/${productId}/`, {
       method: 'GET',
       mode: 'cors',
       headers: {
