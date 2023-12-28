@@ -6,7 +6,7 @@ export default function Detail() {
   const { productId } = useParams();
   
   useEffect(() => {
-    fetch(`https://bruh4python.pythonanywhere.com/product/${productId}/`, {
+    fetch(`https://ab8f-213-230-87-10.ngrok-free.app/products//${productId}/`, {
       method: 'GET',
       mode: 'cors',
       headers: {
@@ -35,7 +35,7 @@ export default function Detail() {
                 <div id="product-carousel" className="carousel slide" data-ride="carousel">
                   <div className="carousel-inner bg-light">
                     <div className="carousel-item active">
-                       <img className="w-100 h-100" src={product.images} alt="Image" /> 
+                       {/* <img className="w-100 h-100" src={product.images} alt="Image" />  */}
                     </div>
                   </div>
                 </div>
@@ -46,8 +46,8 @@ export default function Detail() {
                   <div className="d-flex mb-3">
                   </div>
                   <h3 className="font-weight-semi-bold mb-4">{product.price}</h3>
-                  <p className="mb-4">{product.full_detail}</p>
-                  <h6>sotuvchi:{product.sotuvchi}</h6>
+                  <p className="mb-4">{product.detail}</p>
+                  <h6>sotuvchi:{product.seller}</h6>
                   <div className="d-flex align-items-center mb-4 pt-2">
                     <Link to={`/buying/${product.id}`}> <button className="btn btn-primary px-3"><i className="fa fa-shopping-cart mr-1" />sotib olish</button></Link>
                   </div>
