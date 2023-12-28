@@ -40,7 +40,7 @@ export default function Products() {
             <div className="product-img position-relative overflow-hidden">
              
               
-                <img className="img-fluid w-100" src={product.images} alt="" />
+                {/* <img className="img-fluid w-100" src={product.images} alt="" /> */}
         
               <div className="product-action">
                 <a className="btn btn-outline-dark btn-square" href=""><Link to={`/products/${product.id}`}>
@@ -55,8 +55,8 @@ export default function Products() {
               <div className="d-flex align-items-center justify-content-center mt-2">
                 <h5>{product.price}</h5>
               </div>
-              <small>{product.producttype}</small>
-              <h6>sotuvchi:{product.sotuvchi}</h6>
+              <small>{product.category}</small>
+              <h6>sotuvchi:{product.seller}</h6>
             </div>
           </div>
         </div>
